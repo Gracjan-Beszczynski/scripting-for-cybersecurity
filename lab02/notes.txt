@@ -1,0 +1,86 @@
+Linux command line lab
+Scripting for Cybersecurity
+
+whoami
+hostname
+date
+pwd
+
+ls
+ls -l
+ls -a
+ls -ls
+
+pwd
+cd ..
+ls
+cd lab02
+pwd
+
+cd logs
+touch access.log auth.log firewall.log
+cd ..
+pwd
+
+touch system.txt
+whoami > system.txt
+hostname >> system.txt
+date >> system.txt
+pwd >> system.txt
+cat system.txt
+
+man ls
+ls -h
+ls -t
+man mkdir
+mkdir -p
+man cat
+concatenate files and print on the standard output
+
+name="John"
+course="Cyber"
+year=1
+echo $name is studying $course in Year $year
+
+echo $USER
+echo $HOME
+echo $SHELL
+echo $PATH
+PATH has multiple directory paths
+
+which bash
+/usr/bin/bash
+which python3
+/home/codespace/.python/current/bin/python3
+which grep
+/usr/bin/grep
+which cat
+/usr/bin/cat
+
+module="Scripting"
+Prediction : Module: Scripting
+echo "Module: $module"
+Module: Scripting
+Prediction : Module: $module
+echo 'Module: $module'
+Module: $module
+
+who=$(whoami)
+host=$(hostname)
+cur_dir=$(pwd)
+echo "User $who is logged into $host and is currently in $cur_dir
+User codespace is logged into codespaces-42ee66 and is currently in /workspaces/scripting-for-cybersecurity/lab02
+
+ls | wc -l
+ls -la | wc -l
+env | wc -l
+
+env | grep USER
+ls /usr/bin | grep python
+ls /usr/bin | grep ssh
+ls /usr/bin | grep python | wc -l
+
+ls /usr/bin | grep ssh | wc -l
+ls /usr/bin | grep python | wc -l
+env | grep PATH | wc -l
+ls -la | wc -l
