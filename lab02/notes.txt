@@ -84,3 +84,10 @@ ls /usr/bin | grep ssh | wc -l
 ls /usr/bin | grep python | wc -l
 env | grep PATH | wc -l
 ls -la | wc -l
+
+name="User: $(whoami)"
+host="Computer: $(hostname)"
+dir="Directory: $(pwd)"
+itemindir="Items: $(ls -l | wc -l)"
+echo $name $host $dir $itemindir
+
