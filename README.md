@@ -8,8 +8,6 @@ This repository contains my practical work for the Scripting for Cybersecurity m
 
 ## Labs
 
-<<<<<<< HEAD
 - Lab 01 - Development Environment
-=======
 - Lab 01 - Development Enviroment
->>>>>>> 785f02d (update)
+- Lab 02 - Linux Command Line
