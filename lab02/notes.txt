@@ -91,3 +91,10 @@ dir="Directory: $(pwd)"
 itemindir="Items: $(ls -l | wc -l)"
 echo $name $host $dir $itemindir
 
+pwd
+allows you to go up one directory
+> overwrites while >> appends
+| allows you to chain commands together
+the ' ' doesnt allow variables while " " doesnt
+this command searchs the bin directory for the word python and counts the amount of entries that countain it
+cd ~ takes you to your user's home directory, which is separate from the repository directory cloned by GitHub Codespaces.
