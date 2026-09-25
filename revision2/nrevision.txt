@@ -1,0 +1,49 @@
+head -5 auth.log
+tail -5 auth.log
+
+wc -l auth.log
+
+cat auth.log | grep "Failed password" | wc -l
+
+cat auth.log | grep "Accepted password" | wc -l
+
+cat auth.log | grep -e "admin" -e "root" | wc -l
+
+grep "Failed password" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print 
+$(i+1)}' |  sort |  uniq -c
+
+grep "Failed password" auth.log | awk '{for(i=1;i<=NF;i++) if($i=="from") print 
+$(i+1)}' |  sort |  uniq -c | sort -r
+
+grep "disabled" users.csv | cut -d',' -f1
+
+grep "staff" users.csv | cut -d',' -f1
+
+grep -Ff iocs.txt auth.log
+
+cat access.log | grep -e "403" -e "404" | wc -l
+
+grep 'GET /admin ' access.log
+grep "sqlmap" access.log
+
+find . -name "*.py"
+find . -name "*.sh"
+find . -name "*.log"
+find . -name "*.conf"
+
+find . -type f,d | wc -l
+
+find . -size 0
+
+file evidence/*
+
+dirname /workspaces/scripting-for-cybersecurity/revision2/evidence/suspicious.dat
+basename /workspaces/scripting-for-cybersecurity/revision2/evidence/suspicious.dat
+
+diff -u config-old.txt config-new.txt >> config-changes2.txt
+
+grep -r "admin" .
+grep -r "BLOCK" .
+grep -r "password123" .
+
+touch revision-report.txt
