@@ -1,0 +1,61 @@
+find . -type d
+find . -type f
+find . -mindepth 1 -maxdepth 1
+
+ls */*.py
+ls logs/*.log
+ls */*.conf
+ls evidence/*.txt
+ls config*
+
+find . -name "*.py"
+find . -name "*.conf"
+find . -name "*.old"
+find . -type f -name "*.log"
+find . -type f -name "*config*"
+
+find evidence -type f
+find scripts -type f
+find nested -type f
+
+PNG image data, 1 x 1, 8-bit/color RGBA, non-interlaced
+Zip archive data, at least v2.0 to extract, compression method=deflate
+empty
+ELF, unknown class 154
+ASCII text
+Bourne-Again shell script, ASCII text executable
+
+suspicious
+/workspaces/scripting-for-cybersecurity/lab04/evidence
+
+diff -u config-old.txt config-new.txt >> config-changes.txt
+
+grep -r "admin" .
+grep -r "BLOCK" .
+grep -r "8080" .
+grep -r "Scanning" .
+grep -r "password123" .
+
+find . -type f -size 0
+find . -type f -size 0 | wc -l
+find . -type f -size +0c | wc -l
+
+find . -type f -name "*.py" | wc -l
+find . -type f -name "*.sh" | wc -l
+find . -type f -name "*.log" | wc -l
+find . -type f -name "*.conf" | wc -l
+find . -type f -name "*.txt" | wc -l
+find . -type f -name "*.zip" | wc -l
+
+find evidence -type f | xargs file
+find -name "*.log" | wc -l
+find configs -type f -name "*.conf" | xargs cat
+
+find . -type f -name "*.conf" | xargs grep "port"
+find . -type f -name "*.log" | xargs grep "203.0.113.10"
+find . -type f | xargs grep "admin"
+find . -type f | xargs grep "*debug*"
+
+find . -type f -name "*.zip"
+find . -type f -name "*.zip" | xargs file
+unzip -l evidence/archive.zip
